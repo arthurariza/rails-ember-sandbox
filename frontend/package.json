@@ -66,5 +66,9 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bootstrap": "^5.1.3"
   }
 }
