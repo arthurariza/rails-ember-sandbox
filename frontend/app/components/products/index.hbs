@@ -1,0 +1,20 @@
+<table class='table'>
+  <thead>
+    <tr>
+      <th scope='col'>ID</th>
+      <th scope='col'>Name</th>
+      <th scope='col'>Price</th>
+      <th scope='col'>Quantity In Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each @products as |product|}}
+      <th scope='row'>{{product.id}}</th>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.qty_in_stock}}</td>
+    {{/each}}
+    <tr>
+    </tr>
+  </tbody>
+</table>

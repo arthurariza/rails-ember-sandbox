@@ -10,4 +10,5 @@ Router.map(function () {
   this.route('about');
   this.route('contact');
   this.route('path', { path: 'rout-with-path' });
+  this.route('products');
 });

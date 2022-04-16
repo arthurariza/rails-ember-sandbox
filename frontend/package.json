@@ -6,6 +6,7 @@
   "repository": "",
   "license": "MIT",
   "author": "",
+  "proxy": "http://localhost:3000",
   "directories": {
     "doc": "doc",
     "test": "tests"

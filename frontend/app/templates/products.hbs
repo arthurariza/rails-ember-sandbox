@@ -1,0 +1,24 @@
+<h1 class='my-3'>Products</h1>
+
+{{!-- <Products @products={{@modle}} /> --}}
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th scope='col'>ID</th>
+      <th scope='col'>Name</th>
+      <th scope='col'>Price</th>
+      <th scope='col'>Quantity In Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each @model as |product|}}
+      <tr>
+        <th scope='row'>{{product.id}}</th>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.qty_in_stock}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
