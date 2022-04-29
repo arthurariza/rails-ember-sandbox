@@ -5,8 +5,12 @@ export default class SongsFilterComponent extends Component {
     let { songs, query } = this.args;
 
     if (query) {
-      songs = songs.filter((song) =>
-        song.name.toLowerCase().includes(query.toLowerCase())
+      const regex = new RegExp(query, 'gi');
+      songs = songs.filter(
+        (song) =>
+          song.name.match(regex) ||
+          song.artist.match(regex) ||
+          song.album.match(regex)
       );
     }
 
