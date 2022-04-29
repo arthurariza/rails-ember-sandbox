@@ -4,7 +4,7 @@ import axios from 'axios';
 export default class ProductsRoute extends Route {
   async model() {
     try {
-      const { data } = await axios.get('http://localhost:3000/product');
+      const { data } = await axios.get('http://localhost:3000/api/product');
       return data;
     } catch (e) {
       console.log(e);

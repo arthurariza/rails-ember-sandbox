@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_16_000731) do
+ActiveRecord::Schema.define(version: 2022_04_29_025836) do
 
   create_table "products", force: :cascade do |t|
     t.string "name", null: false
     t.integer "price", null: false
     t.integer "qty_in_stock", default: 0
     t.text "description", limit: 180
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.string "name"
+    t.string "artist"
+    t.integer "duration"
+    t.string "album"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

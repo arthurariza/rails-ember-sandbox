@@ -1,4 +1,7 @@
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
-  resources :product
+  namespace :api do
+    resources :songs
+    resources :product
+  end
 end

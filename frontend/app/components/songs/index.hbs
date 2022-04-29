@@ -1,0 +1,31 @@
+<h1 class='my-3'>Songs</h1>
+
+<label>
+  <span>What song do you wanna listen to?</span>
+  <Input @value={{this.query}} />
+</label>
+
+<table class='table mt-4'>
+  <thead>
+    <tr>
+      <th scope='col'>ID</th>
+      <th scope='col'>Name</th>
+      <th scope='col'>Artist</th>
+      <th scope='col'>Album</th>
+      <th scope='col'>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <Songs::Filter @songs={{@songs}} @query={{this.query}} as |songs|>
+      {{#each songs as |song|}}
+        <tr>
+          <th scope='row'>{{song.id}}</th>
+          <td>{{song.name}}</td>
+          <td>{{song.artist}}</td>
+          <td>{{song.album}}</td>
+          <td>{{song.duration}}</td>
+        </tr>
+      {{/each}}
+    </Songs::Filter>
+  </tbody>
+</table>

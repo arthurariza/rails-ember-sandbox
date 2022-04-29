@@ -11,4 +11,5 @@ Router.map(function () {
   this.route('contact');
   this.route('path', { path: 'rout-with-path' });
   this.route('products');
+  this.route('songs');
 });
