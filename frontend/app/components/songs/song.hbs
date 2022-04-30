@@ -1,9 +1,13 @@
-<div class='card' style='width: 18rem;'>
+<div class='card'>
   <div class='card-body'>
-    <h5 class='card-title'>{{@song.name}}</h5>
-    <h6 class='card-subtitle mb-2 text-muted'>{{@song.artist}}</h6>
-    <p class='card-text'>No lyrics avaliable</p>
-    <a href='#' class='card-link'>Delete</a>
+    <h5 class='card-title'>{{@song.name}} <span>[{{@song.duration}}]</span></h5>
+    <h6 class='card-subtitle mb-2 text-muted'>{{@song.album}}</h6>
+    <p class='card-text'>{{@song.artist}}</p>
+    <button
+      type='button'
+      class='badge bg-danger'
+      {{on 'click' (fn @deleteSong @song.id)}}
+    >Delete</button>
     <a href='#' class='card-link'>Update</a>
   </div>
 </div>

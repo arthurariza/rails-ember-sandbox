@@ -1,4 +1,4 @@
-class Api::SongsController < ApplicationController
+class SongsController < ApplicationController
   before_action :set_song, only: %i[show update destroy]
 
   # GET /songs
@@ -16,7 +16,7 @@ class Api::SongsController < ApplicationController
   # POST /songs
   def create
     @song = Song.new(song_params)
-
+    byebug
     if @song.save
       render json: @song, status: :created, location: @song
     else
